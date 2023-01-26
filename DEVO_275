@@ -12,3 +12,55 @@ pipeline{
             }
         }
     }
+    
+    /*pipeline{
+    agent any
+    environment{
+        VERSION = '1.2.0'
+    } 
+    stages {
+        stage('build'){
+            steps{
+                script{
+                    def myString = "I am allergic to cats."
+ 
+                    if(myString.contains("allergic")){
+                    println myString
+                    } 
+                    else {
+                    println "all clear!"
+                    }
+                    
+                }
+                echo "building"
+            
+                echo "sucessfully sent"
+            }
+        }
+         stage('test') {
+            steps {
+                echo 'Testing...'
+            }
+        }
+        stage('deploy') {
+            steps {
+              echo 'Deploying...'
+            }
+        }
+    }
+    
+     post {
+        always {
+            echo 'Sending mail...'
+            emailext (
+                body:  '${SCRIPT, template="managed:Groovy Email Template"}',
+                recipientProviders: [culprits()],
+                subject: '$BUILD_STATUS Build in Jenkins : $PROJECT_NAME - #$BUILD_NUMBER',
+                to: 'pprince@schueco.com'
+            )
+            echo 'Done!'
+        }
+    }
+}*/
+
+
