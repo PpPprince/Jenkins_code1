@@ -1,0 +1,14 @@
+pipeline{
+    agent any
+    
+    stages{
+        stage('write file'){
+            steps{
+                bat 'echo'  "line 1" > greetings.txt'
+                bat 'echo'  "line 2" >> greetings.txt'
+                echo "the contents of the file is"
+                bat 'cat greetings.txt'
+                bat 'rm -rf greetings.txt'
+            }
+        }
+    }
