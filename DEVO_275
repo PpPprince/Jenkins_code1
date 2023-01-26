@@ -1,4 +1,4 @@
-pipeline{
+/*pipeline{
     agent any
     
     stages{
@@ -11,9 +11,9 @@ pipeline{
                 bat 'rm -rf greetings.txt'
             }
         }
-    }
+    }*/
     
-    /*pipeline{
+    pipeline{
     agent any
     environment{
         VERSION = '1.2.0'
@@ -61,6 +61,6 @@ pipeline{
             echo 'Done!'
         }
     }
-}*/
+}
 
 
